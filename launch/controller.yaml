@@ -1,0 +1,27 @@
+autorobo_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  Rev184_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev184
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev185_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev185
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev186_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev186
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev187_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev187
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev197_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev197
+    pid: {p: 100.0, i: 0.01, d: 10.0}
