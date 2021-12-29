@@ -1,0 +1,766 @@
+<?xml version="1.0" ?>
+<robot name="autorobo" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find autorobo)/urdf/materials.xacro" />
+<!--<xacro:include filename="$(find autorobo)/urdf/autorobo.trans" /> -->
+<xacro:include filename="$(find autorobo)/gazebo/autorobo_materials.gazebo" />
+<xacro:include filename="$(find autorobo)/gazebo/autorobo_physics.gazebo" />
+<xacro:include filename="$(find autorobo)/gazebo/autorobo_plugins.gazebo" />
+
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.003390926891335506 -0.00033516323150329654 0.01902854121941396"/>
+    <mass value="0.1986894956353715"/>
+    <inertia ixx="0.000463" ixy="0.0" ixz="0.0" iyy="0.001178" iyz="-0.0" izz="0.00164"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ST11_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010000206105614487 0.02000031158183989 0.029999743137057628"/>
+    <mass value="0.04411533406877941"/>
+    <inertia ixx="1.4e-05" ixy="-0.0" ixz="0.0" iyy="1.4e-05" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.103397 0.070336 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST11_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.103397 0.070336 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST11_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ST14_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.01000020610561446 -0.019999688418160168 0.02999974313705814"/>
+    <mass value="0.04411533406877944"/>
+    <inertia ixx="1.4e-05" ixy="0.0" ixz="0.0" iyy="1.4e-05" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.103397 -0.069664 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST14_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.103397 -0.069664 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST14_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ST12_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.009999793894385475 0.02000031158183989 0.029999743137057635"/>
+    <mass value="0.04411533406877944"/>
+    <inertia ixx="1.4e-05" ixy="-0.0" ixz="0.0" iyy="1.4e-05" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.096603 0.070336 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST12_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.096603 0.070336 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST12_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ST13_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.009999793894385517 -0.01999968841816003 0.02999974313705815"/>
+    <mass value="0.044115334068779405"/>
+    <inertia ixx="1.4e-05" ixy="0.0" ixz="-0.0" iyy="1.4e-05" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.096603 -0.069664 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST13_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.096603 -0.069664 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST13_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FRM_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.04155058994747507 0.032606509583635465 0.013184742392542432"/>
+    <mass value="0.22883774452212488"/>
+    <inertia ixx="7.9e-05" ixy="-5e-06" ixz="0.0" iyy="2.1e-05" iyz="1e-06" izz="8.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.103397 0.070336 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/FRM_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.103397 0.070336 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/FRM_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FLM_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.041550589947474945 -0.0326058864199557 0.013184742392542814"/>
+    <mass value="0.22883774452212455"/>
+    <inertia ixx="7.9e-05" ixy="5e-06" ixz="0.0" iyy="2.1e-05" iyz="-1e-06" izz="8.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.103397 -0.069664 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/FLM_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.103397 -0.069664 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/FLM_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BLM_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.04155017773624614 -0.03260588641995568 0.013184742392542848"/>
+    <mass value="0.22883774452212463"/>
+    <inertia ixx="7.9e-05" ixy="-5e-06" ixz="-0.0" iyy="2.1e-05" iyz="-1e-06" izz="8.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.096603 -0.069664 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/BLM_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.096603 -0.069664 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/BLM_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="L298n_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.018184118265183444 -0.016389590081724772 0.007470505450688978"/>
+    <mass value="0.0849456744695859"/>
+    <inertia ixx="1.7e-05" ixy="-0.0" ixz="0.0" iyy="1.4e-05" iyz="-3e-06" izz="2.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.015 0.02 -0.022028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/L298n_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.015 0.02 -0.022028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/L298n_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="L298n__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.018184118265183506 0.020352210242275227 0.007470505450689356"/>
+    <mass value="0.0849456744695859"/>
+    <inertia ixx="1.7e-05" ixy="-0.0" ixz="0.0" iyy="1.4e-05" iyz="-3e-06" izz="2.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.015 -0.02 -0.022028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/L298n__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.015 -0.02 -0.022028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/L298n__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Mid_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.09000020610561406 -0.04999968841815995 0.0019997431370579327"/>
+    <mass value="0.24343276346087303"/>
+    <inertia ixx="0.000792" ixy="0.0" ixz="0.0" iyy="0.001336" iyz="-0.0" izz="0.002128"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.093397 -0.049664 -0.081028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/Mid_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.093397 -0.049664 -0.081028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/Mid_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ST24_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010000206105614348 -0.01999968841816041 0.029999743137058166"/>
+    <mass value="0.04411533406877944"/>
+    <inertia ixx="1.4e-05" ixy="0.0" ixz="0.0" iyy="1.4e-05" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.103397 -0.069664 -0.085028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST24_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.103397 -0.069664 -0.085028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST24_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ST21_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.01000020610561439 0.02000031158183952 0.029999743137057666"/>
+    <mass value="0.04411533406877941"/>
+    <inertia ixx="1.4e-05" ixy="-0.0" ixz="-0.0" iyy="1.4e-05" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.103397 0.070336 -0.085028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST21_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.103397 0.070336 -0.085028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST21_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ST23_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.009999793894385559 -0.019999688418160355 0.029999743137058166"/>
+    <mass value="0.04411533406877941"/>
+    <inertia ixx="1.4e-05" ixy="0.0" ixz="-0.0" iyy="1.4e-05" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.096603 -0.069664 -0.085028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST23_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.096603 -0.069664 -0.085028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST23_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ST22_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.009999793894385517 0.020000311581839562 0.029999743137057666"/>
+    <mass value="0.044115334068779447"/>
+    <inertia ixx="1.4e-05" ixy="0.0" ixz="0.0" iyy="1.4e-05" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.096603 0.070336 -0.085028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST22_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.096603 0.070336 -0.085028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/ST22_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RPi_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.015219925250699942 -0.0660692168756824 0.014945123610326155"/>
+    <mass value="0.15575466194305365"/>
+    <inertia ixx="4.8e-05" ixy="1e-06" ixz="1.3e-05" iyy="0.000111" iyz="-1e-06" izz="0.00015"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.096603 -0.069664 -0.085028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/RPi_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.096603 -0.069664 -0.085028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/RPi_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Top_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.08946909280400007 -0.050003074963239746 0.0019997431370579466"/>
+    <mass value="0.24224476346087304"/>
+    <inertia ixx="0.000792" ixy="0.0" ixz="-0.0" iyy="0.001322" iyz="-0.0" izz="0.002114"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.086603 -0.049664 -0.145028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/Top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.086603 -0.049664 -0.145028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/Top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="devboard_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.038745194968203944 0.0048324965825590465 0.0188385937620843"/>
+    <mass value="0.049762223710507494"/>
+    <inertia ixx="1.5e-05" ixy="-0.0" ixz="0.0" iyy="3.8e-05" iyz="-0.0" izz="4.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.099779 0.004645 -0.149028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/devboard_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.099779 0.004645 -0.149028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/devboard_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="HEAD_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.002169326950683094 -0.00045913391485895424 0.015660649139400185"/>
+    <mass value="0.022255320970732673"/>
+    <inertia ixx="1e-05" ixy="-0.0" ixz="0.0" iyy="1e-05" iyz="0.0" izz="1.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.042779 -0.000355 -0.172528"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/HEAD_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.042779 -0.000355 -0.172528"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/HEAD_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BLW_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.0625928369433222e-07 0.01774442834888272 1.0532700872173395e-06"/>
+    <mass value="0.021150459892245396"/>
+    <inertia ixx="8e-06" ixy="-0.0" ixz="0.0" iyy="1.4e-05" iyz="-0.0" izz="8e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.054103 -0.069164 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/BLW_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.054103 -0.069164 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/BLW_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FLW_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.0625928356943213e-07 0.01774442834888261 1.0532700871548895e-06"/>
+    <mass value="0.02115045989224537"/>
+    <inertia ixx="8e-06" ixy="-0.0" ixz="0.0" iyy="1.4e-05" iyz="-0.0" izz="8e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.060897 -0.069264 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/FLW_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.060897 -0.069264 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/FLW_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FRW_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.0597386508891535e-07 -0.017743804717030964 1.0539525905420288e-06"/>
+    <mass value="0.021150462533868698"/>
+    <inertia ixx="8e-06" ixy="0.0" ixz="-0.0" iyy="1.4e-05" iyz="0.0" izz="8e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.060897 0.069936 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/FRW_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.060897 0.069936 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/FRW_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BRW_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.0602321434276538e-07 -0.01774380471703077 1.0539525905489677e-06"/>
+    <mass value="0.021150462533868708"/>
+    <inertia ixx="8e-06" ixy="0.0" ixz="-0.0" iyy="1.4e-05" iyz="0.0" izz="8e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.054103 0.069936 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/BRW_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.054103 0.069936 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/BRW_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BRM_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.04155017773624601 0.03260650958363558 0.013184742392542425"/>
+    <mass value="0.22883774452212485"/>
+    <inertia ixx="7.9e-05" ixy="5e-06" ixz="-0.0" iyy="2.1e-05" iyz="1e-06" izz="8.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.096603 0.070336 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/BRM_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.096603 0.070336 -0.021028"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/BRM_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FLT_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00025020610562153517 -0.009499688418159957 -2.568629421245694e-07"/>
+    <mass value="0.00807035044660998"/>
+    <inertia ixx="5e-06" ixy="-0.0" ixz="-0.0" iyy="9e-06" iyz="-0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.060897 -0.097764 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/FLT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.060897 -0.097764 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/FLT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BLT_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0001155476671940367 -0.009399688418160038 5.214608931113085e-05"/>
+    <mass value="0.008070350446609956"/>
+    <inertia ixx="5e-06" ixy="-0.0" ixz="-0.0" iyy="9e-06" iyz="-0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.054103 -0.097564 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/BLT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.054103 -0.097564 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/BLT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FRT_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="5.8668397429254004e-05 0.009500311581840476 8.440157548460919e-05"/>
+    <mass value="0.00807035044660997"/>
+    <inertia ixx="5e-06" ixy="0.0" ixz="0.0" iyy="9e-06" iyz="-0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.060897 0.098436 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/FRT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.060897 0.098436 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/FRT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BRT_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.9107324203525575e-05 0.009500311581839449 1.3718710280941071e-05"/>
+    <mass value="0.00807035044660996"/>
+    <inertia ixx="5e-06" ixy="-0.0" ixz="-0.0" iyy="9e-06" iyz="-0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.054103 0.098436 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/BRT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.054103 0.098436 -0.034428"/>
+    <geometry>
+      <mesh filename="package://autorobo/meshes/BRT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid117" type="fixed">
+  <origin rpy="0 0 0" xyz="0.103397 -0.070336 0.021028"/>
+  <parent link="base_link"/>
+  <child link="ST11_1"/>
+</joint>
+
+<joint name="Rigid118" type="fixed">
+  <origin rpy="0 0 0" xyz="0.103397 0.069664 0.021028"/>
+  <parent link="base_link"/>
+  <child link="ST14_1"/>
+</joint>
+
+<joint name="Rigid119" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.096603 -0.070336 0.021028"/>
+  <parent link="base_link"/>
+  <child link="ST12_1"/>
+</joint>
+
+<joint name="Rigid120" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.096603 0.069664 0.021028"/>
+  <parent link="base_link"/>
+  <child link="ST13_1"/>
+</joint>
+
+<joint name="Rigid121" type="fixed">
+  <origin rpy="0 0 0" xyz="0.103397 -0.070336 0.021028"/>
+  <parent link="base_link"/>
+  <child link="FRM_1"/>
+</joint>
+
+<joint name="Rigid122" type="fixed">
+  <origin rpy="0 0 0" xyz="0.103397 0.069664 0.021028"/>
+  <parent link="base_link"/>
+  <child link="FLM_1"/>
+</joint>
+
+<joint name="Rigid123" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.096603 0.069664 0.021028"/>
+  <parent link="base_link"/>
+  <child link="BLM_1"/>
+</joint>
+
+<joint name="Rigid129" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.015 -0.02 0.022028"/>
+  <parent link="base_link"/>
+  <child link="L298n_1"/>
+</joint>
+
+<joint name="Rigid130" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.015 0.02 0.022028"/>
+  <parent link="base_link"/>
+  <child link="L298n__1__1"/>
+</joint>
+
+<joint name="Rigid131" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.01 -0.02 0.06"/>
+  <parent link="ST14_1"/>
+  <child link="Mid_1"/>
+</joint>
+
+<joint name="Rigid132" type="fixed">
+  <origin rpy="0 0 0" xyz="0.01 0.02 0.004"/>
+  <parent link="Mid_1"/>
+  <child link="ST24_1"/>
+</joint>
+
+<joint name="Rigid133" type="fixed">
+  <origin rpy="0 0 0" xyz="0.01 -0.12 0.004"/>
+  <parent link="Mid_1"/>
+  <child link="ST21_1"/>
+</joint>
+
+<joint name="Rigid134" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.19 0.02 0.004"/>
+  <parent link="Mid_1"/>
+  <child link="ST23_1"/>
+</joint>
+
+<joint name="Rigid135" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.19 -0.12 0.004"/>
+  <parent link="Mid_1"/>
+  <child link="ST22_1"/>
+</joint>
+
+<joint name="Rigid136" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.19 0.02 0.004"/>
+  <parent link="Mid_1"/>
+  <child link="RPi_1"/>
+</joint>
+
+<joint name="Rigid137" type="fixed">
+  <origin rpy="0 0 0" xyz="0.01 -0.02 0.06"/>
+  <parent link="ST23_1"/>
+  <child link="Top_1"/>
+</joint>
+
+<joint name="Rigid138" type="fixed">
+  <origin rpy="0 0 0" xyz="0.186382 -0.054309 0.004"/>
+  <parent link="Top_1"/>
+  <child link="devboard_1"/>
+</joint>
+
+<joint name="Lidar_Joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.057 0.005 0.0235"/>
+  <parent link="devboard_1"/>
+  <child link="HEAD_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="BL_Joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0425 -0.0005 0.0134"/>
+  <parent link="BLM_1"/>
+  <child link="BLW_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="FL_Joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0425 -0.0004 0.0134"/>
+  <parent link="FLM_1"/>
+  <child link="FLW_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="FR_Joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0425 0.0004 0.0134"/>
+  <parent link="FRM_1"/>
+  <child link="FRW_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="BR_Joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0425 0.0004 0.0134"/>
+  <parent link="BRM_1"/>
+  <child link="BRW_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rigid167" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.096603 -0.070336 0.021028"/>
+  <parent link="base_link"/>
+  <child link="BRM_1"/>
+</joint>
+
+<joint name="Rigid168" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0285 0.0"/>
+  <parent link="FLW_1"/>
+  <child link="FLT_1"/>
+</joint>
+
+<joint name="Rigid169" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0284 0.0"/>
+  <parent link="BLW_1"/>
+  <child link="BLT_1"/>
+</joint>
+
+<joint name="Rigid170" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.0285 0.0"/>
+  <parent link="FRW_1"/>
+  <child link="FRT_1"/>
+</joint>
+
+<joint name="Rigid171" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.0285 0.0"/>
+  <parent link="BRW_1"/>
+  <child link="BRT_1"/>
+</joint>
+
+</robot>

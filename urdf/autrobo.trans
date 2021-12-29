@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<robot name="autorobo" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="Lidar_Joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Lidar_Joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Lidar_Joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="BL_Joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="BL_Joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="BL_Joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="FL_Joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="FL_Joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="FL_Joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="FR_Joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="FR_Joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="FR_Joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="BR_Joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="BR_Joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="BR_Joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

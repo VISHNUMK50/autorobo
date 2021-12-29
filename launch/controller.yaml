@@ -5,23 +5,23 @@ autorobo_controller:
     publish_rate: 50
 
   # Position Controllers --------------------------------------
-  Rev184_position_controller:
+  Lidar_Joint_position_controller:
     type: effort_controllers/JointPositionController
-    joint: Rev184
+    joint: Lidar_Joint
     pid: {p: 100.0, i: 0.01, d: 10.0}
-  Rev185_position_controller:
+  BL_Joint_position_controller:
     type: effort_controllers/JointPositionController
-    joint: Rev185
+    joint: BL_Joint
     pid: {p: 100.0, i: 0.01, d: 10.0}
-  Rev186_position_controller:
+  FL_Joint_position_controller:
     type: effort_controllers/JointPositionController
-    joint: Rev186
+    joint: FL_Joint
     pid: {p: 100.0, i: 0.01, d: 10.0}
-  Rev187_position_controller:
+  FR_Joint_position_controller:
     type: effort_controllers/JointPositionController
-    joint: Rev187
+    joint: FR_Joint
     pid: {p: 100.0, i: 0.01, d: 10.0}
-  Rev197_position_controller:
+  BR_Joint_position_controller:
     type: effort_controllers/JointPositionController
-    joint: Rev197
+    joint: BR_Joint
     pid: {p: 100.0, i: 0.01, d: 10.0}

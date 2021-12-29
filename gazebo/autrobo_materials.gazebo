@@ -1,0 +1,128 @@
+<?xml version="1.0" ?>
+<robot name="autorobo" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/WhiteGlow" />
+<xacro:property name="Wheel_color" value="Gazebo/White" />
+<xacro:property name="Tire_color" value="Gazebo/FlatBlack" />
+<xacro:property name="Std_color" value="Gazebo/Yellow" />
+<xacro:property name="Lidar_color" value="Gazebo/Blue" />
+<xacro:property name="Motor_color" value="Gazebo/Grey" />
+
+
+
+<gazebo>
+  <plugin filename="libgazebo_ros_control.so" name="control"/>
+</gazebo>
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+</gazebo>
+
+<gazebo reference="ST11_1">
+  <material>${Std_color}</material>
+</gazebo>
+
+<gazebo reference="ST14_1">
+  <material>${Std_color}</material>
+</gazebo>
+
+<gazebo reference="ST12_1">
+  <material>${Std_color}</material>
+</gazebo>
+
+<gazebo reference="ST13_1">
+  <material>${Std_color}</material>
+</gazebo>
+
+<gazebo reference="FRM_1">
+  <material>${Motor_color}</material>
+</gazebo>
+
+<gazebo reference="FLM_1">
+  <material>${Motor_color}</material>
+</gazebo>
+
+<gazebo reference="BLM_1">
+  <material>${Motor_color}</material>
+</gazebo>
+
+<gazebo reference="L298n_1">
+  <material>${Motor_color}</material>
+</gazebo>
+
+<gazebo reference="L298n__1__1">
+  <material>${Motor_color}</material>
+</gazebo>
+
+<gazebo reference="Mid_1">
+  <material>${body_color}</material>
+</gazebo>
+
+<gazebo reference="ST24_1">
+  <material>${Std_color}</material>
+</gazebo>
+
+<gazebo reference="ST21_1">
+  <material>${Std_color}</material>
+</gazebo>
+
+<gazebo reference="ST23_1">
+  <material>${Std_color}</material>
+</gazebo>
+
+<gazebo reference="ST22_1">
+  <material>${Std_color}</material>
+</gazebo>
+
+<gazebo reference="RPi_1">
+  <material>${Motor_color}</material>
+</gazebo>
+
+<gazebo reference="Top_1">
+  <material>${body_color}</material>
+</gazebo>
+
+<gazebo reference="devboard_1">
+  <material>${Tire_color}</material>
+</gazebo>
+
+<gazebo reference="HEAD_1">
+  <material>${Lidar_color}</material>
+</gazebo>
+
+<gazebo reference="BLW_1">
+  <material>${Wheel_color}</material>
+</gazebo>
+
+<gazebo reference="FLW_1">
+  <material>${Wheel_color}</material>
+</gazebo>
+
+<gazebo reference="FRW_1">
+  <material>${Wheel_color}</material>
+</gazebo>
+
+<gazebo reference="BRW_1">
+  <material>${Wheel_color}</material>
+</gazebo>
+
+<gazebo reference="BRM_1">
+  <material>${Motor_color}</material>
+</gazebo>
+
+<gazebo reference="FLT_1">
+  <material>${Tire_color}</material>
+</gazebo>
+
+<gazebo reference="BLT_1">
+  <material>${Tire_color}</material>
+</gazebo>
+
+<gazebo reference="FRT_1">
+  <material>${Tire_color}</material>
+</gazebo>
+
+<gazebo reference="BRT_1">
+  <material>${Tire_color}</material>
+</gazebo>
+
+</robot>

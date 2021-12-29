@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+
+<robot name="autorobo" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="std_friction" value="0.1" />
+<xacro:property name="Wheel_friction" value="0.1" />
+
+
+<gazebo reference="base_link">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="ST11_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="ST14_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="ST12_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="ST13_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="FRM_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="FLM_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="BLM_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="L298n_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="L298n__1__1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="Mid_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="ST24_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="ST21_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="ST23_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="ST22_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="RPi_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="Top_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="devboard_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="HEAD_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="BLW_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="FLW_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="FRW_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="BRW_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="BRM_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="FLT_1">
+  <mu1>${Wheel_friction}</mu1>
+  <mu2>${Wheel_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="BLT_1">
+  <mu1>${Wheel_friction}</mu1>
+  <mu2>${Wheel_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="FRT_1">
+  <mu1>${Wheel_friction}</mu1>
+  <mu2>${Wheel_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="BRT_1">
+  <mu1>${Wheel_friction}</mu1>
+  <mu2>${Wheel_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+</robot>
