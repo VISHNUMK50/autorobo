@@ -59,7 +59,7 @@
   </plugin>
 </gazebo>
 
-<!--********LIDAR**********-->
+<!--#####################********LIDAR**********#######################-->
   <gazebo reference="HEAD_1">
     <sensor type="ray" name="Rplidar">
       <pose>0 0 0 0 0 0</pose>
@@ -70,8 +70,8 @@
           <horizontal>
             <samples>720</samples>
             <resolution>1</resolution>
-            <min_angle>-6.28319</min_angle>
-            <max_angle>6.28319</max_angle>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
           </horizontal>
         </scan>
         <range>
